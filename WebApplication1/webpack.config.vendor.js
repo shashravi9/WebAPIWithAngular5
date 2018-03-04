@@ -16,10 +16,12 @@ const treeShakableModules = [
 ];
 const nonTreeShakableModules = [
     'bootstrap',
-    'bootstrap/dist/css/bootstrap.css',
+    'bootstrap/dist/css/bootstrap.css',    
     'es6-promise',
     'es6-shim',
     'event-source-polyfill',
+    'font-awesome',
+    'font-awesome/css/font-awesome.css',
     'jquery',
 ];
 const allModules = treeShakableModules.concat(nonTreeShakableModules);
@@ -32,7 +34,7 @@ module.exports = (env) => {
         resolve: { extensions: [ '.js' ] },
         module: {
             rules: [
-                { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, use: 'url-loader?limit=100000' }
+                { test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf|otf)(\?|$)/, use: 'url-loader?limit=100000' }
             ]
         },
         output: {

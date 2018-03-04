@@ -1,5 +1,4 @@
 ﻿import { Component } from '@angular/core';
-import { CalendarModule } from 'primeng/calendar'
 
 @Component({
     selector: 'consumer-form',
@@ -8,7 +7,7 @@ import { CalendarModule } from 'primeng/calendar'
 export class ConsumerFormComponent {
     public minValue: number = 0;
     public maxValue: number = 0;
-    public calendar: Date;
+    public calendarValue: Date;
 
     checkMin(val: number) {
         if (val < 0) {

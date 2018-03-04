@@ -21,11 +21,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\AddEmployee\add-employee.component.ts" />
+    <None Remove="ClientApp\app\components\AddEmployee\edit-employee.component.ts" />
     <None Remove="ClientApp\app\components\form\form.component.ts" />
+    <None Remove="ClientApp\app\components\home\EmployeeService.ts" />
+    <None Remove="ClientApp\app\Model\Employee.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\AddEmployee\add-employee.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\AddEmployee\edit-employee.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\form\form.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\home\EmployeeService.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Model\Employee.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

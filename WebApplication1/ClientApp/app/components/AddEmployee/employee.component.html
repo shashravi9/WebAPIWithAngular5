@@ -1,0 +1,42 @@
+﻿<h1> Add Employee</h1>
+<form #addEmp="ngForm" novalidate class="needs-validation">
+    <div class="row">
+        <div class="col-md-12 p-l-0">
+            <fieldset class="form-group col-md-6">
+                <label>Name</label>
+                <input type="text" class="form-control" required name="name" [(ngModel)]="empData.Name" #name="ngModel" />
+            </fieldset>
+            <fieldset class="form-group col-md-6">
+                <label>Salary</label>
+                <input type="number" class="form-control" name="salary" placeholder="Salary" [(ngModel)]="empData.Salary" #name="ngModel" />
+            </fieldset>
+            <fieldset class="form-group col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control" name="city" [(ngModel)]="empData.City" #name="ngModel" />
+            </fieldset>
+            <fieldset class="form-group col-md-6">
+                <label>Department</label>
+                <input type="text" class="form-control" name="department" [(ngModel)]="empData.Department" #name="ngModel" />
+            </fieldset>
+            <fieldset class="form-group col-md-6">
+                <label>Gender</label>
+                <div>
+                    <input type="radio" name="gender" value="Male" [(ngModel)]="empData.Gender" #name="ngModel" />Male
+                    <input type="radio" name="gender" value="Female" [(ngModel)]="empData.Gender" #name="ngModel" />Female
+                </div>
+            </fieldset>
+            <fieldset class="form-group col-md-6">
+                <label>Phone</label>
+                <input type="tel" class="form-control" placeholder="(555)-555-5555" name="phone" [(ngModel)]="empData.Phone" #name="ngModel" />
+            </fieldset>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <fieldset class="form-group pull-right">
+                <button type="submit" [disabled]="!addEmp.form.valid" (click)="save(addEmp.value, addEmp.form.valid)" class="btn btn-primary">Save</button>
+                <button type="button" (click)="back();" class="btn btn-default">Back</button>
+            </fieldset>
+        </div>
+    </div>
+</form>

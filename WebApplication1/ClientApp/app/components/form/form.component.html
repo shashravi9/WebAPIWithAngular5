@@ -1,5 +1,5 @@
 ﻿<div class="container">
-    <form #customerForm="ngForm">
+    <!--<form #customerForm="ngForm">
         <div class="form-group col-md-4">
             <label for="minRange">Min</label>
             <input type="number" class="form-control col-md-3" id="minRange" placeholder="0" name="minBalue" [(ngModel)]="minValue" (change)="checkMin(minValue)" required #name="ngModel">
@@ -10,10 +10,12 @@
         </div>
         <div class="form-group col-md-6">
             <label for="calendarControl">Calendar</label>
-            <p-calendar [(ngModel)]="calendarValue" class="form-control col-md-3" id="calendarControl" name="calendarControl" #name="ngModel"></p-calendar>
+            <span><i class="fas fa-address-book"></i></span>
+            <p-calendar [(ngModel)]="calendarValue" name="calendarValue" id="calendarControl"></p-calendar>
         </div>
         <div class="form-group col-md-3">
             <button type="submit" class="btn btn-success" onsubmit="save()" [disabled]="!customerForm.form.valid">Submit</button>
         </div>
-    </form>
+    </form>-->
+    
 </div>

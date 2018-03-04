@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 import 'zone.js';
 import 'bootstrap';
+import 'angular2-fontawesome';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.browser.module';
@@ -21,3 +22,8 @@ if (module.hot) {
 // Note: @ng-tools/webpack looks for the following expression when performing production
 // builds. Don't change how this line looks, otherwise you may break tree-shaking.
 const modulePromise = platformBrowserDynamic().bootstrapModule(AppModule);
+
+//document.addEventListener('DOMContentLoaded', () => {
+//    platformBrowserDynamic().bootstrapModule(AppModule)
+//        .catch(err => console.log(err));
+//});
